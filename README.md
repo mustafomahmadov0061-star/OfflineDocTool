@@ -1,5 +1,7 @@
 # Offline Document Tool
 
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest_Release-blue?style=for-the-badge&logo=github)](https://github.com/mustafomahmadov0061-star/OfflineDocTool/releases/latest)
+
 A robust, fully offline document processing and OCR application built with **Python (FastAPI)**, **React**, and **Tesseract-OCR**. 
 Designed to run locally as a desktop application without requiring any internet connection.
 
