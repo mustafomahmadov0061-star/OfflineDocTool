@@ -28,21 +28,22 @@ Designed to run locally as a desktop application without requiring any internet 
 - **Frontend**: React, Vite, Tailwind CSS
 - **Bundler**: PyInstaller
 
-## ⚙️ Local Development
+## ⚙️ Local Development (For Developers)
 
-### 1. Prerequisites
-- Python 3.9+
-- Node.js 18+
-- [Tesseract-OCR](https://github.com/UB-Mannheim/tesseract/wiki) installed on your system (Default path: `C:\Program Files\Tesseract-OCR`)
-- Poppler for PDF to Image conversions (Needs to be in PATH or bundled)
+When cloning this repository, note that massive binary folders (`app_cache` and `_internal`) are intentionally ignored by `.gitignore` to keep the repository light. You must set them up locally.
 
-### 2. Setup Backend
+### 1. External Binaries (Required for Development)
+- **Tesseract-OCR**: Download and install it to your system (Default path: `C:\Program Files\Tesseract-OCR`).
+- **Ghostscript**: Download Ghostscript (e.g., v10.02.1) and extract its `bin` and `lib` folders into a new directory named `_internal/gs/` in the project root.
+
+### 2. Setup Python Virtual Environment (`venv`)
+The `venv` folder isolates all your Python packages. You don't need to manually copy any `.exe` files into it. `pip` handles everything automatically!
 ```bash
 # Create and activate virtual environment
 python -m venv venv
 venv\Scripts\activate  # On Windows
 
-# Install dependencies
+# Install all dependencies (FastAPI, PaddleOCR, PyTorch, etc.)
 pip install -r requirements.txt
 ```
 
@@ -54,10 +55,12 @@ npm run build  # Builds the React app into frontend/dist
 cd ..
 ```
 
-### 4. Run Application
+### 4. Run Application & Auto-Download Models
 ```bash
 python main.py
 ```
+**Magic First Run:** When you run the application and try to process a table for the first time, PaddleOCR and HuggingFace will detect that their neural network models are missing. They will automatically connect to the internet, download the necessary models, and create the `app_cache` folder on your computer!
+
 *Note: The script will automatically find an open port, launch the FastAPI server, and open a native desktop window.*
 
 ## 📦 Building Standalone Application (Windows .exe)
