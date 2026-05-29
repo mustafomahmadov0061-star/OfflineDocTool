@@ -16,13 +16,14 @@ Designed to run locally as a desktop application without requiring any internet 
 
 ## 📸 Screenshots
 
-*(Add your beautiful UI screenshots here before pushing to GitHub to showcase the project!)*
-
 <details>
 <summary>Click to view screenshots</summary>
 
-![Dashboard Placeholder](docs/dashboard.png)
-![Merge Tool Placeholder](docs/merge.png)
+### English Interface
+![Dashboard English](docs/dashboard_en.png)
+
+### Turkish Interface
+![Dashboard Turkish](docs/dashboard_tr.png)
 
 </details>
 
