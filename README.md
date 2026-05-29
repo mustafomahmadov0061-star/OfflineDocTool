@@ -16,16 +16,11 @@ Designed to run locally as a desktop application without requiring any internet 
 
 ## 📸 Screenshots
 
-<details>
-<summary>Click to view screenshots</summary>
-
 ### English Interface
 ![Dashboard English](docs/dashboard_en.png)
 
 ### Turkish Interface
 ![Dashboard Turkish](docs/dashboard_tr.png)
-
-</details>
 
 ## 🛠️ Tech Stack
 
