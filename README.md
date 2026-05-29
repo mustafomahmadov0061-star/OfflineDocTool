@@ -12,7 +12,7 @@ Designed to run locally as a desktop application without requiring any internet 
 
 <br>
 
-[![Download Latest Release](https://img.shields.io/github/v/release/mustafomahmadov0061-star/OfflineDocTool?style=for-the-badge&label=Download%20Portable%20Release&color=2ea44f&logo=windows)](https://github.com/mustafomahmadov0061-star/OfflineDocTool/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/mustafomahmadov0061-star/OfflineDocTool/total?style=for-the-badge&logo=github&color=2ea44f&label=DOWNLOAD%20RELEASE)](https://github.com/mustafomahmadov0061-star/OfflineDocTool/releases/latest)
 
 </div>
 
