@@ -1,0 +1,33 @@
+# Environments
+venv/
+env/
+.env
+
+# PyInstaller / Build
+build/
+dist/
+*.spec
+_internal/
+
+# Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Application Specific
+app.log
+app_cache/
+temp/
+scratch/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Node (in case it leaks to root)
+node_modules/
+npm-debug.log
