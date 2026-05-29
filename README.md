@@ -6,11 +6,13 @@
 [![Forks](https://img.shields.io/github/forks/mustafomahmadov0061-star/OfflineDocTool?style=for-the-badge&color=007ec6)](https://github.com/mustafomahmadov0061-star/OfflineDocTool/network/members)
 [![Issues](https://img.shields.io/github/issues/mustafomahmadov0061-star/OfflineDocTool?style=for-the-badge&color=e2b900)](https://github.com/mustafomahmadov0061-star/OfflineDocTool/issues)
 [![License](https://img.shields.io/github/license/mustafomahmadov0061-star/OfflineDocTool?style=for-the-badge&color=8a8a8a)](https://github.com/mustafomahmadov0061-star/OfflineDocTool/blob/main/LICENSE)
-<br>
-[![Download Latest Release](https://img.shields.io/github/v/release/mustafomahmadov0061-star/OfflineDocTool?style=for-the-badge&label=Download%20Release&color=2ea44f)](https://github.com/mustafomahmadov0061-star/OfflineDocTool/releases/latest)
 
 A robust, fully offline document processing and OCR application built with **Python (FastAPI)**, **React**, and **Tesseract-OCR**. <br>
 Designed to run locally as a desktop application without requiring any internet connection.
+
+<br>
+
+[![Download Latest Release](https://img.shields.io/github/v/release/mustafomahmadov0061-star/OfflineDocTool?style=for-the-badge&label=Download%20Portable%20Release&color=2ea44f&logo=windows)](https://github.com/mustafomahmadov0061-star/OfflineDocTool/releases/latest)
 
 </div>
 
