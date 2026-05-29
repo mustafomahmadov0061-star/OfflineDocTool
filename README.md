@@ -65,13 +65,29 @@ python main.py
 ```
 *Note: The script will automatically find an open port, launch the FastAPI server, and open a native desktop window.*
 
-## 📦 Building Standalone Application
-You can bundle the entire application (Python backend, compiled React frontend, and optionally Tesseract models) into a standalone directory using PyInstaller.
+## 📦 Building Standalone Application (Windows .exe)
+To package the app into a single standalone folder with all dependencies (including OCR models and Ghostscript) without forcing users to install anything:
 
-```bash
-pyinstaller --clean OfflineDocTool.spec
-```
-The output will be generated in the `dist/` directory.
+1. **Prepare the Cache Directory (`app_cache`)**
+   Run the application normally in development mode once (`python main.py`) and use the OCR features. This forces the application to download all required Hugging Face (Table Transformer) and PaddleOCR models into the `app_cache/` folder automatically.
+
+2. **Prepare the Internal Binaries (`_internal/gs`)**
+   The application requires Ghostscript for certain PDF manipulations.
+   - Download Ghostscript (e.g., v10.02.1)
+   - Copy its `bin` and `lib` folders into `_internal/gs/` in the project root.
+   *(Resulting structure: `_internal/gs/bin/` and `_internal/gs/lib/`)*
+
+3. **Install Tesseract-OCR**
+   Ensure Tesseract is installed at `C:/Program Files/Tesseract-OCR`. The PyInstaller spec file will automatically bundle this entire folder into your final build.
+
+4. **Build with PyInstaller**
+   If you don't have a `.spec` file yet, or want to use the existing `OfflineDocTool.spec`, you can compile the application by running:
+   ```bash
+   pyinstaller --clean OfflineDocTool.spec
+   ```
+   *Note: Our `OfflineDocTool.spec` is already configured to automatically include the `frontend/dist`, `app_cache`, `_internal/gs`, and `Tesseract-OCR` folders in the final build. Do not add `_internal` or `app_cache` to GitHub as they are massive binary folders.*
+
+   The final output will be generated in the `dist/OfflineDocTool` directory. You can zip this folder and share it!
 
 ## 📄 License
 This project is open-source and available under the [MIT License](LICENSE).

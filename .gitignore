@@ -7,6 +7,7 @@ env/
 build/
 dist/
 *.spec
+_internal/
 
 # Python Caches
 __pycache__/
@@ -19,8 +20,7 @@ __pycache__/
 app.log
 temp/
 scratch/
-app_cache/*
-!app_cache/.gitkeep
+app_cache/
 
 # IDE / OS
 .vscode/
