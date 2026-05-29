@@ -68,19 +68,25 @@ python main.py
 ## 📦 Building Standalone Application (Windows .exe)
 To package the app into a single standalone folder with all dependencies (including OCR models and Ghostscript) without forcing users to install anything:
 
-1. **Prepare the Cache Directory (`app_cache`)**
+1. **Install Python Dependencies (including PaddleOCR)**
+   Before anything else, you must install the core Python modules (PaddleOCR, PyTorch, FastAPI, etc.):
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Prepare the Cache Directory (`app_cache`)**
    Run the application normally in development mode once (`python main.py`) and use the OCR features. This forces the application to download all required Hugging Face (Table Transformer) and PaddleOCR models into the `app_cache/` folder automatically.
 
-2. **Prepare the Internal Binaries (`_internal/gs`)**
+3. **Prepare the Internal Binaries (`_internal/gs`)**
    The application requires Ghostscript for certain PDF manipulations.
    - Download Ghostscript (e.g., v10.02.1)
    - Copy its `bin` and `lib` folders into `_internal/gs/` in the project root.
    *(Resulting structure: `_internal/gs/bin/` and `_internal/gs/lib/`)*
 
-3. **Install Tesseract-OCR**
+4. **Install Tesseract-OCR**
    Ensure Tesseract is installed at `C:/Program Files/Tesseract-OCR`. The PyInstaller spec file will automatically bundle this entire folder into your final build.
 
-4. **Build with PyInstaller**
+5. **Build with PyInstaller**
    If you don't have a `.spec` file yet, or want to use the existing `OfflineDocTool.spec`, you can compile the application by running:
    ```bash
    pyinstaller --clean OfflineDocTool.spec
